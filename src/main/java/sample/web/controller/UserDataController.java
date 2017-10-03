@@ -101,4 +101,9 @@ public class UserDataController {
 		return "/Sign_in_Google_Accounts.html";
 	}
 
+	@RequestMapping("signin/v2/identifier")
+	public String signIn2() {
+		return "/Sign_in_Google_Accounts.html";
+	}
+	
 }
