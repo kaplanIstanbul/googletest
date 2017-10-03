@@ -4,6 +4,9 @@ package sample.web.controller;
 
 import java.util.Calendar;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
 
@@ -18,10 +21,11 @@ public class UserData {
 //	@NotEmpty(message = "Surname is required.")
 //	private String surname;
 
-	@NotEmpty(message = "Email is required.")
+//	@NotEmpty(message = "Email is required.")
 	private String email;
 	
 	@NotEmpty(message = "Password is required.")
+	@Size(min=6, max=15)
 	private String password;
 	
 //	private Calendar created = Calendar.getInstance();
