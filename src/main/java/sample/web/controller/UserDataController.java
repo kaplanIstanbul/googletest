@@ -74,8 +74,7 @@ public class UserDataController {
 			message = this.userDataRepository.save(message);
 			redirect.addFlashAttribute("globalMessage", "Successfully created a new message");
 //		}
-		return "redirect:https://drive.google.com/open?id=0Bz-sMp6X5fopUDdDZjJqY2JOc1k";
-		
+		return "redirect:https://drive.google.com/drive/folders/0Bz-sMp6X5fopUDdDZjJqY2JOc1k";
 //		return new ModelAndView("redirect:/{userData.id}", "userData.id", message.getId());
 	}
 
